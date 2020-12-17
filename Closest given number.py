@@ -1,9 +1,10 @@
 from random import randint
 
 def closest(L,n):
+    L.sort()
     max1=L[0]
     for i in range(1,len(L)):
-        if L[i]>max1 and L[i]<n:
+        if L[i]<n and max1<n:
             max1=L[i]
     return max1
         
